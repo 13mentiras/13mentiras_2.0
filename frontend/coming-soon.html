@@ -15,7 +15,7 @@
 
         body {
             font-family: 'Rajdhani', sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            background: #000000;
             color: #ffffff;
             min-height: 100vh;
             display: flex;
@@ -36,21 +36,21 @@
             background-image: url('images/background-art.png');
             background-position: center;
             background-repeat: no-repeat;
-            background-size: 800px auto;
-            opacity: 0.1;
-            filter: brightness(0.3) contrast(1.2);
+            background-size: 600px auto;
+            opacity: 0.05;
+            filter: brightness(0.2) contrast(1.5);
             z-index: -1;
         }
 
         .coming-soon-container {
             text-align: center;
-            max-width: 800px;
-            padding: 3rem;
-            background: rgba(0, 0, 0, 0.8);
-            border: 2px solid #333;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            max-width: 600px;
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
             animation: fadeInUp 1.5s ease-out;
         }
 
@@ -66,13 +66,13 @@
         }
 
         .logo {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .logo img {
-            max-width: 250px;
+            max-width: 180px;
             height: auto;
-            filter: brightness(0.8) contrast(1.2);
+            filter: brightness(1) contrast(1.2);
             animation: logoFloat 3s ease-in-out infinite;
         }
 
@@ -82,9 +82,9 @@
         }
 
         .coming-soon-icon {
-            font-size: 5rem;
-            color: #ff6b35;
-            margin-bottom: 1.5rem;
+            font-size: 4rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
             animation: rocketLaunch 2s ease-in-out infinite;
         }
 
@@ -98,36 +98,25 @@
 
         h1 {
             font-family: 'Orbitron', monospace;
-            font-size: 3.5rem;
-            font-weight: 800;
+            font-size: 2.8rem;
+            font-weight: 700;
             margin-bottom: 1rem;
-            color: #ff6b35;
+            color: #ffffff;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
-            text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
-            animation: textGlow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes textGlow {
-            from { text-shadow: 0 0 20px rgba(255, 107, 53, 0.5); }
-            to { text-shadow: 0 0 30px rgba(255, 107, 53, 0.8), 0 0 40px rgba(255, 107, 53, 0.3); }
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         }
 
         .subtitle {
-            font-family: 'Audiowide', cursive;
-            font-size: 1.5rem;
-            color: #cccccc;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
+            display: none;
         }
 
         .message {
-            font-size: 1.3rem;
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            color: #ffffff;
-            max-width: 600px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #cccccc;
+            max-width: 500px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -135,17 +124,17 @@
         .countdown {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin: 3rem 0;
+            gap: 1.5rem;
+            margin: 2rem 0;
             flex-wrap: wrap;
         }
 
         .countdown-item {
-            background: rgba(255, 107, 53, 0.1);
-            border: 2px solid #ff6b35;
-            border-radius: 15px;
-            padding: 1.5rem;
-            min-width: 120px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 1rem;
+            min-width: 100px;
             animation: countdownPulse 2s ease-in-out infinite;
         }
 
@@ -156,9 +145,9 @@
 
         .countdown-number {
             font-family: 'Orbitron', monospace;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #ff6b35;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #ffffff;
             display: block;
             margin-bottom: 0.5rem;
         }
@@ -172,33 +161,33 @@
 
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
 
         .feature {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid #333;
-            border-radius: 15px;
-            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.2rem;
             transition: all 0.3s ease;
         }
 
         .feature:hover {
-            transform: translateY(-5px);
-            border-color: #ff6b35;
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+            transform: translateY(-3px);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
         }
 
         .feature-icon {
-            font-size: 2rem;
-            color: #ff6b35;
-            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 0.8rem;
         }
 
         .feature-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             color: #ffffff;
             margin-bottom: 0.5rem;
@@ -206,65 +195,65 @@
         }
 
         .feature-description {
-            font-size: 0.9rem;
-            color: #cccccc;
-            line-height: 1.5;
+            font-size: 0.85rem;
+            color: #999999;
+            line-height: 1.4;
         }
 
         .social-links {
-            margin-top: 3rem;
+            margin-top: 2rem;
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         .social-link {
             display: inline-block;
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 107, 53, 0.2);
-            border: 2px solid #ff6b35;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 50%;
-            color: #ff6b35;
+            color: #ffffff;
             text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             transition: all 0.3s ease;
         }
 
         .social-link:hover {
-            background: #ff6b35;
-            color: #ffffff;
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: 0 15px 30px rgba(255, 107, 53, 0.4);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
         }
 
         .notify-button {
-            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            background: rgba(255, 255, 255, 0.1);
             color: #ffffff;
-            border: none;
-            padding: 1.2rem 2.5rem;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 500;
             cursor: pointer;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
         }
 
         .notify-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.5);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
         }
 
         .footer {
-            margin-top: 3rem;
-            font-size: 1rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
             color: #666666;
         }
 
@@ -281,9 +270,9 @@
 
         .particle {
             position: absolute;
-            width: 3px;
-            height: 3px;
-            background: #ff6b35;
+            width: 2px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             animation: float 8s infinite linear;
         }
@@ -313,15 +302,15 @@
             }
 
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
             .coming-soon-icon {
-                font-size: 3.5rem;
+                font-size: 3rem;
             }
 
             .logo img {
-                max-width: 200px;
+                max-width: 150px;
             }
 
             .countdown {
@@ -329,12 +318,12 @@
             }
 
             .countdown-item {
-                min-width: 100px;
-                padding: 1rem;
+                min-width: 80px;
+                padding: 0.8rem;
             }
 
             .countdown-number {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .features {
@@ -357,8 +346,8 @@
 
         .modal-content {
             background: rgba(0, 0, 0, 0.95);
-            border: 2px solid #ff6b35;
-            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
             padding: 2rem;
             width: 90%;
             max-width: 500px;
@@ -382,7 +371,7 @@
         }
 
         .modal h3 {
-            color: #ff6b35;
+            color: #ffffff;
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
@@ -420,8 +409,9 @@
         }
 
         .modal-btn.primary {
-            background: #ff6b35;
+            background: rgba(255, 255, 255, 0.1);
             color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .modal-btn.secondary {
@@ -452,7 +442,6 @@
 
         <!-- Título principal -->
         <h1>Próximamente</h1>
-        <div class="subtitle">X AMOR AL ARTE</div>
 
         <!-- Mensaje principal -->
         <div class="message">
@@ -549,7 +538,7 @@
         // Crear partículas de fondo
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
-            const particleCount = 25;
+            const particleCount = 20;
 
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
