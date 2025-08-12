@@ -44,8 +44,8 @@
 
         .coming-soon-container {
             text-align: center;
-            max-width: 600px;
-            padding: 2.5rem;
+            max-width: 400px;
+            padding: 3rem 2rem;
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
@@ -66,11 +66,11 @@
         }
 
         .logo {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .logo img {
-            max-width: 180px;
+            max-width: 200px;
             height: auto;
             filter: brightness(1) contrast(1.2);
             animation: logoFloat 3s ease-in-out infinite;
@@ -82,10 +82,7 @@
         }
 
         .coming-soon-icon {
-            font-size: 4rem;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            animation: rocketLaunch 2s ease-in-out infinite;
+            display: none;
         }
 
         @keyframes rocketLaunch {
@@ -98,9 +95,9 @@
 
         h1 {
             font-family: 'Orbitron', monospace;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
             color: #ffffff;
             text-transform: uppercase;
             letter-spacing: 0.1em;
@@ -112,105 +109,56 @@
         }
 
         .message {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            color: #cccccc;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+            display: none;
         }
 
         .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
+            display: none;
         }
 
         .countdown-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            padding: 1rem;
-            min-width: 100px;
-            animation: countdownPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes countdownPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            display: none;
         }
 
         .countdown-number {
-            font-family: 'Orbitron', monospace;
-            font-size: 2rem;
-            font-weight: 600;
-            color: #ffffff;
-            display: block;
-            margin-bottom: 0.5rem;
+            display: none;
         }
 
         .countdown-label {
-            font-size: 0.9rem;
-            color: #cccccc;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
+            display: none;
         }
 
         .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+            display: none;
         }
 
         .feature {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 1.2rem;
-            transition: all 0.3s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-3px);
-            border-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+            display: none;
         }
 
         .feature-icon {
-            font-size: 1.5rem;
-            color: #ffffff;
-            margin-bottom: 0.8rem;
+            display: none;
         }
 
         .feature-title {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
+            display: none;
         }
 
         .feature-description {
-            font-size: 0.85rem;
-            color: #999999;
-            line-height: 1.4;
+            display: none;
         }
 
         .social-links {
-            margin-top: 2rem;
+            margin-top: 0;
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .social-link {
             display: inline-block;
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 50%;
@@ -219,7 +167,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1rem;
             transition: all 0.3s ease;
         }
 
@@ -231,30 +179,11 @@
         }
 
         .notify-button {
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            margin-top: 1.5rem;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .notify-button:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: translateY(-2px);
+            display: none;
         }
 
         .footer {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #666666;
+            display: none;
         }
 
         /* Efectos de partículas */
@@ -302,126 +231,17 @@
             }
 
             h1 {
-                font-size: 2.2rem;
-            }
-
-            .coming-soon-icon {
-                font-size: 3rem;
+                font-size: 2rem;
             }
 
             .logo img {
-                max-width: 150px;
-            }
-
-            .countdown {
-                gap: 1rem;
-            }
-
-            .countdown-item {
-                min-width: 80px;
-                padding: 0.8rem;
-            }
-
-            .countdown-number {
-                font-size: 1.8rem;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
+                max-width: 160px;
             }
         }
 
         /* Modal de notificación */
         .modal {
             display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background: rgba(0, 0, 0, 0.95);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            padding: 2rem;
-            width: 90%;
-            max-width: 500px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            animation: modalSlideIn 0.3s ease-out;
-        }
-
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translate(-50%, -60%);
-            }
-            to {
-                opacity: 1;
-                transform: translate(-50%, -50%);
-            }
-        }
-
-        .modal h3 {
-            color: #ffffff;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .modal input {
-            width: 100%;
-            padding: 1rem;
-            margin: 1rem 0;
-            border: 1px solid #333;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-            font-size: 1rem;
-        }
-
-        .modal input::placeholder {
-            color: #666666;
-        }
-
-        .modal-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-
-        .modal-btn {
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .modal-btn.primary {
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .modal-btn.secondary {
-            background: transparent;
-            color: #cccccc;
-            border: 1px solid #333;
-        }
-
-        .modal-btn:hover {
-            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -435,110 +255,27 @@
             <img src="images/logo-nuevo.png" alt="13 MENTIRAS" onerror="this.style.display='none'">
         </div>
 
-        <!-- Icono de próximamente -->
-        <div class="coming-soon-icon">
-            <i class="fas fa-rocket"></i>
-        </div>
-
         <!-- Título principal -->
         <h1>Próximamente</h1>
-
-        <!-- Mensaje principal -->
-        <div class="message">
-            Estamos trabajando en algo increíble. Una nueva experiencia web que revolucionará 
-            la forma en que ves el arte urbano y la dualidad creativa. Prepárate para algo épico.
-        </div>
-
-        <!-- Contador regresivo -->
-        <div class="countdown" id="countdown">
-            <div class="countdown-item">
-                <span class="countdown-number" id="days">00</span>
-                <span class="countdown-label">Días</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="hours">00</span>
-                <span class="countdown-label">Horas</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="minutes">00</span>
-                <span class="countdown-label">Minutos</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="seconds">00</span>
-                <span class="countdown-label">Segundos</span>
-            </div>
-        </div>
-
-        <!-- Características -->
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-palette"></i>
-                </div>
-                <div class="feature-title">Arte Urbano</div>
-                <div class="feature-description">Diseños únicos y exclusivos que reflejan la dualidad del arte moderno</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-tshirt"></i>
-                </div>
-                <div class="feature-title">Colección Premium</div>
-                <div class="feature-description">Camisetas de alta calidad con estampados artísticos únicos</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
-                <div class="feature-title">Tienda Online</div>
-                <div class="feature-description">Experiencia de compra fluida y personalizada</div>
-            </div>
-        </div>
-
-        <!-- Botón de notificación -->
-        <button class="notify-button" onclick="openNotifyModal()">
-            <i class="fas fa-bell"></i> Notificarme cuando esté listo
-        </button>
 
         <!-- Enlaces sociales -->
         <div class="social-links">
             <a href="https://instagram.com/13mentiras" target="_blank" class="social-link" title="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" class="social-link" title="TikTok">
-                <i class="fab fa-tiktok"></i>
-            </a>
             <a href="mailto:info@13mentiras.com" class="social-link" title="Email">
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <p>&copy; 2025 13 MENTIRAS. Todos los derechos reservados.</p>
-        </div>
     </div>
 
-    <!-- Modal de notificación -->
-    <div id="notifyModal" class="modal">
-        <div class="modal-content">
-            <h3><i class="fas fa-bell"></i> Notificación de Lanzamiento</h3>
-            <p>Recibe una notificación cuando el sitio esté listo:</p>
-            <input type="email" id="emailInput" placeholder="tu@email.com" required>
-            <div class="modal-buttons">
-                <button class="modal-btn primary" onclick="subscribeNotification()">Suscribirse</button>
-                <button class="modal-btn secondary" onclick="closeNotifyModal()">Cancelar</button>
-            </div>
-        </div>
-    </div>
+
 
     <script>
-        // Fecha objetivo (puedes cambiarla)
-        let targetDate = new Date('2025-02-01T00:00:00').getTime();
-
         // Crear partículas de fondo
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
-            const particleCount = 20;
+            const particleCount = 15;
 
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
@@ -550,84 +287,10 @@
             }
         }
 
-        // Actualizar contador regresivo
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-
-            if (distance < 0) {
-                // El sitio está listo
-                document.getElementById('countdown').innerHTML = '<div class="countdown-item"><span class="countdown-number">¡LISTO!</span><span class="countdown-label">El sitio está disponible</span></div>';
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById('days').textContent = days.toString().padStart(2, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-        }
-
-        // Modal de notificación
-        function openNotifyModal() {
-            document.getElementById('notifyModal').style.display = 'block';
-        }
-
-        function closeNotifyModal() {
-            document.getElementById('notifyModal').style.display = 'none';
-            document.getElementById('emailInput').value = '';
-        }
-
-        function subscribeNotification() {
-            const email = document.getElementById('emailInput').value;
-            
-            if (email && email.includes('@')) {
-                // Aquí puedes implementar la lógica para guardar el email
-                alert('¡Gracias! Te notificaremos cuando el sitio esté listo.');
-                closeNotifyModal();
-                
-                // Simular guardado (en producción, aquí harías una llamada al servidor)
-                localStorage.setItem('notifyEmail', email);
-            } else {
-                alert('Por favor, introduce un email válido.');
-            }
-        }
-
-        // Cerrar modal al hacer click fuera
-        window.onclick = function(event) {
-            const modal = document.getElementById('notifyModal');
-            if (event.target === modal) {
-                closeNotifyModal();
-            }
-        }
-
         // Inicializar cuando se carga la página
         document.addEventListener('DOMContentLoaded', function() {
             createParticles();
-            
-            // Actualizar contador cada segundo
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-            
-            // Verificar si ya hay un email guardado
-            const savedEmail = localStorage.getItem('notifyEmail');
-            if (savedEmail) {
-                document.getElementById('emailInput').value = savedEmail;
-            }
         });
-
-        // Función para cambiar la fecha objetivo (para administradores)
-        function setTargetDate(newDate) {
-            targetDate = new Date(newDate).getTime();
-            updateCountdown();
-        }
-
-        // Hacer la función disponible globalmente
-        window.setTargetDate = setTargetDate;
     </script>
 </body>
 </html>
