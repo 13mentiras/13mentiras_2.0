@@ -3,171 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>13 MENTIRAS - X AMOR AL ARTE</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>🚀 Próximamente - 13 MENTIRAS</title>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Audiowide&family=Orbitron:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Fondo artístico sutil */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/background-art.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 600px auto;
+            opacity: 0.05;
+            filter: brightness(0.2) contrast(1.5);
+            z-index: -1;
+        }
+
+        .coming-soon-container {
+            text-align: center;
+            max-width: 100%;
+            padding: 0;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            backdrop-filter: none;
+            box-shadow: none;
+            animation: fadeInUp 1.5s ease-out;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            margin-bottom: 2.5rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+            filter: brightness(1) contrast(1.2);
+            animation: logoFloat 3s ease-in-out infinite;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .coming-soon-icon {
+            display: none;
+        }
+
+        @keyframes rocketLaunch {
+            0% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-10px) rotate(-5deg); }
+            50% { transform: translateY(-20px) rotate(0deg); }
+            75% { transform: translateY(-10px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+
+        h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0 0 2.5rem 0;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            text-align: center;
+            width: 100%;
+            display: block;
+            padding: 0;
+        }
+
+        .subtitle {
+            display: none;
+        }
+
+        .message {
+            display: none;
+        }
+
+        .countdown {
+            display: none;
+        }
+
+        .countdown-item {
+            display: none;
+        }
+
+        .countdown-number {
+            display: none;
+        }
+
+        .countdown-label {
+            display: none;
+        }
+
+        .features {
+            display: none;
+        }
+
+        .feature {
+            display: none;
+        }
+
+        .feature-icon {
+            display: none;
+        }
+
+        .feature-title {
+            display: none;
+        }
+
+        .feature-description {
+            display: none;
+        }
+
+        .social-links {
+            margin-top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            width: 100%;
+        }
+
+        .social-link {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .notify-button {
+            display: none;
+        }
+
+        .footer {
+            display: none;
+        }
+
+        /* Efectos de partículas */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 8s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .coming-soon-container {
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+                letter-spacing: 0.06em;
+            }
+
+            .logo {
+                margin-bottom: 2rem;
+            }
+
+            .logo img {
+                max-width: 150px;
+            }
+
+            .social-links {
+                gap: 1rem;
+            }
+
+            .social-link {
+                width: 35px;
+                height: 35px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .coming-soon-container {
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+                margin-bottom: 1.8rem;
+            }
+
+            .logo img {
+                max-width: 130px;
+            }
+
+            .social-link {
+                width: 32px;
+                height: 32px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Modal de notificación */
+        .modal {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <div id="home"></div>
-    <header>
-        <nav>
-            <div class="nav-container">
-                <div class="nav-links">
-                    <a href="#products">PRODUCTOS</a>
-                    <a href="#contact">CONTACTO</a>
-                </div>
-                <div class="logo">
-                    <a href="#home" class="brand-logo">
-                        <img src="images/logo-nuevo.png" alt="13 MENTIRAS" class="brand-image">
-                    </a>
-                </div>
-                <div class="cart-icon" id="cartIcon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Partículas de fondo -->
+    <div class="particles" id="particles"></div>
 
-    <!-- Carrito desplegable -->
-    <div class="cart-dropdown" id="cartDropdown">
-        <div class="cart-header">
-            <h3>Carrito de Compras</h3>
-            <button class="close-cart" id="closeCart">
-                <i class="fas fa-times"></i>
-            </button>
+    <div class="coming-soon-container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo-nuevo.png" alt="13 MENTIRAS" onerror="this.style.display='none'">
         </div>
-        <div class="cart-items" id="cartItems">
-            <!-- Los items del carrito se añadirán dinámicamente -->
-        </div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total:</span>
-                <span id="cartTotal">€0.00</span>
-            </div>
-            <button class="checkout-btn" id="checkoutBtn">Finalizar Compra</button>
+
+        <!-- Título principal -->
+        <h1>Próximamente</h1>
+
+        <!-- Enlaces sociales -->
+        <div class="social-links">
+            <a href="https://instagram.com/13mentiras" target="_blank" class="social-link" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:info@13mentiras.com" class="social-link" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
         </div>
     </div>
 
-    <main>
-        <section id="products" class="products-section">
-            <div class="container">
-                <h2>X AMOR AL ARTE</h2>
-                <p class="section-subtitle">Diseños únicos y exclusivos de 13 MENTIRAS</p>
-                <div class="products-grid">
-                    <div class="product-card" data-product-id="1">
-                        <div class="product-image">
-                            <img src="images_web_product/Dualidad_telaraña.png" alt="Dualidad Tela de Araña">
-                        </div>
-                        <div class="product-info">
-                            <h3>DUALIDAD TELA DE ARAÑA</h3>
-                            <p class="price">€15 <span class="original-price">€45</span></p>
-                        </div>
-                    </div>
 
-                    <div class="product-card" data-product-id="2">
-                        <div class="product-image">
-                            <img src="images_web_product/Grafiti_rojo.png" alt="Dualidad Grafitti Rojo">
-                        </div>
-                        <div class="product-info">
-                            <h3>DUALIDAD GRAFITTI ROJO</h3>
-                            <p class="price">€15 <span class="original-price">€35</span></p>
-                        </div>
-                    </div>
 
-                    <div class="product-card" data-product-id="3">
-                        <div class="product-image">
-                            <img src="images_web_product/Dualidad_X_AMOR_AL_ARTE.png" alt="Dualidad X AMOR AL ARTE">
-                        </div>
-                        <div class="product-info">
-                            <h3>DUALIDAD X AMOR AL ARTE</h3>
-                            <p class="price">€15 <span class="original-price">€30</span></p>
-                        </div>
-                    </div>
+    <script>
+        // Crear partículas de fondo
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 15;
 
-                    <div class="product-card" data-product-id="4">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop" alt="Camiseta Vintage">
-                            <div class="sold-out">AGOTADO</div>
-                        </div>
-                        <div class="product-info">
-                            <h3>CAMISETA VINTAGE</h3>
-                            <p class="price">€50</p>
-                        </div>
-                    </div>
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
 
-                    <div class="product-card" data-product-id="5">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop" alt="Camiseta Geométrica">
-                        </div>
-                        <div class="product-info">
-                            <h3>CAMISETA GEOMÉTRICA</h3>
-                            <p class="price">€38</p>
-                        </div>
-                    </div>
-
-                    <div class="product-card" data-product-id="6">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop" alt="Camiseta Artística">
-                        </div>
-                        <div class="product-info">
-                            <h3>CAMISETA ARTÍSTICA</h3>
-                            <p class="price">€42</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>CONTACTO</h2>
-                <div class="contact-content">
-                    <p>Para consultas sobre productos o colaboraciones:</p>
-                    <div class="contact-icons">
-                        <a href="https://instagram.com/13mentiras" target="_blank" class="contact-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <div class="contact-icon">
-                            <i class="fab fa-tiktok"></i>
-                        </div>
-                        <div class="contact-icon" id="emailContact">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 13 MENTIRAS. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- Botón flotante "Volver arriba" -->
-    <button id="scrollToTop" class="scroll-to-top" title="Volver arriba">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Previsualización de productos -->
-    <div id="productPreview" class="product-preview">
-        <button class="product-preview-close" onclick="closeProductPreview()">&times;</button>
-        <img class="product-preview-image" src="" alt="Previsualización del producto">
-        <div class="product-preview-info">
-            <h3></h3>
-            <p class="price"></p>
-        </div>
-    </div>
-
-    <!-- Vista en pantalla completa para fotos -->
-    <div id="fullscreenOverlay" class="fullscreen-overlay">
-        <button class="fullscreen-close" onclick="closeFullscreen()">&times;</button>
-        <img id="fullscreenImage" class="fullscreen-image" src="" alt="Imagen en pantalla completa">
-    </div>
-
-    <script src="script.js"></script>
+        // Inicializar cuando se carga la página
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+        });
+    </script>
 </body>
-</html> 
+</html>
