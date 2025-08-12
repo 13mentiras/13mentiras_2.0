@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛠️ Mantenimiento - 13 MENTIRAS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Audiowide&family=Orbitron:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Fondo artístico sutil */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/background-art.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 800px auto;
+            opacity: 0.1;
+            filter: brightness(0.3) contrast(1.2);
+            z-index: -1;
+        }
+
+        .maintenance-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #333;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            margin-bottom: 2rem;
+        }
+
+        .logo img {
+            max-width: 200px;
+            height: auto;
+            filter: brightness(0.8) contrast(1.2);
+        }
+
+        .maintenance-icon {
+            font-size: 4rem;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ff6b35;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .subtitle {
+            font-family: 'Audiowide', cursive;
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #ffffff;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #333;
+            border-radius: 4px;
+            margin: 2rem 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b35, #ff8c42);
+            border-radius: 4px;
+            animation: progress 3s ease-in-out infinite;
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+
+        .status {
+            display: inline-block;
+            background: #ff6b35;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+            animation: statusPulse 2s infinite;
+        }
+
+        @keyframes statusPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .estimated-time {
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid #ff6b35;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+
+        .estimated-time h3 {
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .estimated-time p {
+            color: #cccccc;
+            font-size: 1rem;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 107, 53, 0.2);
+            border: 1px solid #ff6b35;
+            border-radius: 50%;
+            color: #ff6b35;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #ff6b35;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .refresh-button {
+            background: #ff6b35;
+            color: #ffffff;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .refresh-button:hover {
+            background: #ff8c42;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #666666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .maintenance-container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .maintenance-icon {
+                font-size: 3rem;
+            }
+
+            .logo img {
+                max-width: 150px;
+            }
+        }
+
+        /* Efectos de partículas */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ff6b35;
+            border-radius: 50%;
+            animation: float 6s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Partículas de fondo -->
+    <div class="particles" id="particles"></div>
+
+    <div class="maintenance-container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo-nuevo.png" alt="13 MENTIRAS" onerror="this.style.display='none'">
+        </div>
+
+        <!-- Icono de mantenimiento -->
+        <div class="maintenance-icon">
+            <i class="fas fa-tools"></i>
+        </div>
+
+        <!-- Título -->
+        <h1>Mantenimiento</h1>
+        <div class="subtitle">X AMOR AL ARTE</div>
+
+        <!-- Mensaje principal -->
+        <div class="message">
+            Estamos realizando mejoras en nuestro sitio web para ofrecerte una experiencia aún mejor. 
+            Estamos trabajando para que todo esté listo lo antes posible.
+        </div>
+
+        <!-- Barra de progreso -->
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <!-- Estado -->
+        <div class="status">
+            <i class="fas fa-clock"></i> En Progreso
+        </div>
+
+        <!-- Tiempo estimado -->
+        <div class="estimated-time">
+            <h3><i class="fas fa-hourglass-half"></i> Tiempo Estimado</h3>
+            <p>30 minutos - 2 horas</p>
+        </div>
+
+        <!-- Enlaces sociales -->
+        <div class="social-links">
+            <a href="https://instagram.com/13mentiras" target="_blank" class="social-link" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="mailto:info@13mentiras.com" class="social-link" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <!-- Botón de refrescar -->
+        <button class="refresh-button" onclick="checkMaintenance()">
+            <i class="fas fa-sync-alt"></i> Verificar Estado
+        </button>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 13 MENTIRAS. Todos los derechos reservados.</p>
+        </div>
+    </div>
+
+    <script>
+        // Crear partículas de fondo
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 20;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Función para verificar el estado del mantenimiento
+        function checkMaintenance() {
+            const button = document.querySelector('.refresh-button');
+            const icon = button.querySelector('i');
+            
+            // Cambiar el icono y texto temporalmente
+            icon.className = 'fas fa-spinner fa-spin';
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verificando...';
+            button.disabled = true;
+
+            // Simular verificación (en producción, aquí harías una llamada al servidor)
+            setTimeout(() => {
+                // Aquí puedes cambiar la lógica para verificar si el sitio está listo
+                const isMaintenanceComplete = false; // Cambiar a true cuando quieras quitar la página de mantenimiento
+                
+                if (isMaintenanceComplete) {
+                    // Redirigir al sitio principal
+                    window.location.href = 'index.html';
+                } else {
+                    // Mantener en mantenimiento
+                    icon.className = 'fas fa-sync-alt';
+                    button.innerHTML = '<i class="fas fa-sync-alt"></i> Verificar Estado';
+                    button.disabled = false;
+                    
+                    // Mostrar mensaje
+                    alert('El sitio aún está en mantenimiento. ¡Gracias por tu paciencia!');
+                }
+            }, 2000);
+        }
+
+        // Inicializar partículas cuando se carga la página
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            
+            // Verificar automáticamente cada 5 minutos
+            setInterval(checkMaintenance, 300000);
+        });
+
+        // Función para cambiar el estado del mantenimiento (para administradores)
+        function setMaintenanceStatus(status, message, estimatedTime) {
+            const statusElement = document.querySelector('.status');
+            const messageElement = document.querySelector('.message');
+            const timeElement = document.querySelector('.estimated-time p');
+            
+            if (status === 'complete') {
+                statusElement.innerHTML = '<i class="fas fa-check-circle"></i> Completado';
+                statusElement.style.background = '#28a745';
+                messageElement.textContent = '¡El mantenimiento ha sido completado! Redirigiendo al sitio principal...';
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 3000);
+            } else {
+                statusElement.innerHTML = `<i class="fas fa-clock"></i> ${status}`;
+                messageElement.textContent = message || 'Estamos realizando mejoras en nuestro sitio web...';
+                timeElement.textContent = estimatedTime || '30 minutos - 2 horas';
+            }
+        }
+
+        // Hacer la función disponible globalmente para administradores
+        window.setMaintenanceStatus = setMaintenanceStatus;
+    </script>
+</body>
+</html>
