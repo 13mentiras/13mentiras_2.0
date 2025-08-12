@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 MENTIRAS - X AMOR AL ARTE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Audiowide&family=Orbitron:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="home"></div>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="#products">PRODUCTOS</a>
+                    <a href="#contact">CONTACTO</a>
+                </div>
+                <div class="logo">
+                    <a href="#home" class="brand-logo">
+                        <img src="images/logo-nuevo.png" alt="13 MENTIRAS" class="brand-image">
+                    </a>
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrito desplegable -->
+    <div class="cart-dropdown" id="cartDropdown">
+        <div class="cart-header">
+            <h3>Carrito de Compras</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Los items del carrito se añadirán dinámicamente -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">€0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <main>
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2>X AMOR AL ARTE</h2>
+                <p class="section-subtitle">Diseños únicos y exclusivos de 13 MENTIRAS</p>
+                <div class="products-grid">
+                    <div class="product-card" data-product-id="1">
+                        <div class="product-image">
+                            <img src="images_web_product/Dualidad_telaraña.png" alt="Dualidad Tela de Araña">
+                        </div>
+                        <div class="product-info">
+                            <h3>DUALIDAD TELA DE ARAÑA</h3>
+                            <p class="price">€15 <span class="original-price">€45</span></p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="2">
+                        <div class="product-image">
+                            <img src="images_web_product/Grafiti_rojo.png" alt="Dualidad Grafitti Rojo">
+                        </div>
+                        <div class="product-info">
+                            <h3>DUALIDAD GRAFITTI ROJO</h3>
+                            <p class="price">€15 <span class="original-price">€35</span></p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="3">
+                        <div class="product-image">
+                            <img src="images_web_product/Dualidad_X_AMOR_AL_ARTE.png" alt="Dualidad X AMOR AL ARTE">
+                        </div>
+                        <div class="product-info">
+                            <h3>DUALIDAD X AMOR AL ARTE</h3>
+                            <p class="price">€15 <span class="original-price">€30</span></p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="4">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop" alt="Camiseta Vintage">
+                            <div class="sold-out">AGOTADO</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>CAMISETA VINTAGE</h3>
+                            <p class="price">€50</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="5">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop" alt="Camiseta Geométrica">
+                        </div>
+                        <div class="product-info">
+                            <h3>CAMISETA GEOMÉTRICA</h3>
+                            <p class="price">€38</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="6">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop" alt="Camiseta Artística">
+                        </div>
+                        <div class="product-info">
+                            <h3>CAMISETA ARTÍSTICA</h3>
+                            <p class="price">€42</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>CONTACTO</h2>
+                <div class="contact-content">
+                    <p>Para consultas sobre productos o colaboraciones:</p>
+                    <div class="contact-icons">
+                        <a href="https://instagram.com/13mentiras" target="_blank" class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <div class="contact-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+                        <div class="contact-icon" id="emailContact">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 13 MENTIRAS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante "Volver arriba" -->
+    <button id="scrollToTop" class="scroll-to-top" title="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Previsualización de productos -->
+    <div id="productPreview" class="product-preview">
+        <button class="product-preview-close" onclick="closeProductPreview()">&times;</button>
+        <img class="product-preview-image" src="" alt="Previsualización del producto">
+        <div class="product-preview-info">
+            <h3></h3>
+            <p class="price"></p>
+        </div>
+    </div>
+
+    <!-- Vista en pantalla completa para fotos -->
+    <div id="fullscreenOverlay" class="fullscreen-overlay">
+        <button class="fullscreen-close" onclick="closeFullscreen()">&times;</button>
+        <img id="fullscreenImage" class="fullscreen-image" src="" alt="Imagen en pantalla completa">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
