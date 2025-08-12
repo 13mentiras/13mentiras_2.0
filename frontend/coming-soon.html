@@ -44,19 +44,20 @@
 
         .coming-soon-container {
             text-align: center;
-            max-width: 350px;
-            padding: 2.5rem 1.5rem;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            max-width: 100%;
+            padding: 0;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            backdrop-filter: none;
+            box-shadow: none;
             animation: fadeInUp 1.5s ease-out;
-            margin: 0 auto;
+            margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            min-height: 100vh;
         }
 
         @keyframes fadeInUp {
@@ -106,7 +107,7 @@
             font-family: 'Orbitron', monospace;
             font-size: 2rem;
             font-weight: 600;
-            margin-bottom: 2.5rem;
+            margin: 0 0 2.5rem 0;
             color: #ffffff;
             text-transform: uppercase;
             letter-spacing: 0.08em;
@@ -114,8 +115,7 @@
             text-align: center;
             width: 100%;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            padding: 0;
         }
 
         .subtitle {
@@ -242,9 +242,9 @@
         /* Responsive */
         @media (max-width: 768px) {
             .coming-soon-container {
-                margin: 1rem;
-                padding: 1.8rem 1.2rem;
-                max-width: 320px;
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
             }
 
             h1 {
@@ -274,9 +274,9 @@
 
         @media (max-width: 480px) {
             .coming-soon-container {
-                margin: 0.8rem;
-                padding: 1.5rem 1rem;
-                max-width: 300px;
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
             }
 
             h1 {
