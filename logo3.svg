@@ -1,0 +1,48 @@
+<svg width="300" height="80" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo transparente -->
+  <rect width="300" height="80" fill="transparent"/>
+  
+  <!-- 13 mentiras con tipografía número 3 (cursiva/elegante) -->
+  <g filter="drop-shadow(2px 2px 4px rgba(0,0,0,0.5))">
+    <!-- Número 1 -->
+    <path d="M15 25 L15 55 L25 55 L25 30 L35 40 L35 25 Z" fill="#ffffff"/>
+    
+    <!-- Número 3 -->
+    <path d="M40 25 C45 25, 50 30, 50 35 C50 40, 45 45, 40 45 C45 45, 50 50, 50 55 C50 60, 45 65, 40 65 L35 65 C40 65, 45 60, 45 55 C45 50, 40 45, 35 45 C40 45, 45 40, 45 35 C45 30, 40 25, 35 25 Z" fill="#ffffff"/>
+    
+    <!-- m -->
+    <path d="M60 55 L60 35 L65 35 L65 50 L70 35 L75 35 L75 50 L80 35 L80 55 L75 55 L75 40 L70 55 L65 55 L65 40 L60 55 Z" fill="#ffffff"/>
+    
+    <!-- e -->
+    <path d="M85 35 L85 55 L100 55 L100 50 L90 50 L90 45 L98 45 L98 40 L90 40 L90 35 Z" fill="#ffffff"/>
+    
+    <!-- n -->
+    <path d="M105 35 L105 55 L110 55 L110 45 L115 55 L120 55 L120 35 L115 35 L115 50 L110 35 Z" fill="#ffffff"/>
+    
+    <!-- t -->
+    <path d="M125 35 L125 55 L135 55 L135 50 L130 50 L130 35 Z" fill="#ffffff"/>
+    
+    <!-- i -->
+    <path d="M140 35 L140 55 L145 55 L145 35 Z M142.5 30 C143.5 30, 144.5 31, 144.5 32 C144.5 33, 143.5 34, 142.5 34 C141.5 34, 140.5 33, 140.5 32 C140.5 31, 141.5 30, 142.5 30 Z" fill="#ffffff"/>
+    
+    <!-- r -->
+    <path d="M150 35 L150 55 L155 55 L155 45 C155 40, 160 40, 160 45 L160 55 L165 55 L165 45 C165 35, 155 35, 155 35 Z" fill="#ffffff"/>
+    
+    <!-- a -->
+    <path d="M170 35 L170 55 L175 55 L175 45 L180 55 L185 55 L185 35 L180 35 L180 50 L175 35 Z" fill="#ffffff"/>
+    
+    <!-- s -->
+    <path d="M190 35 C195 35, 200 40, 200 45 C200 50, 195 55, 190 55 L185 55 C190 55, 195 50, 195 45 C195 40, 190 35, 185 35 Z" fill="#ffffff"/>
+  </g>
+  
+  <!-- Efecto de brillo -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg> 
