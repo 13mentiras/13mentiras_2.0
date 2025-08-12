@@ -44,8 +44,8 @@
 
         .coming-soon-container {
             text-align: center;
-            max-width: 400px;
-            padding: 3rem 2rem;
+            max-width: 350px;
+            padding: 2.5rem 1.5rem;
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
@@ -66,11 +66,11 @@
         }
 
         .logo {
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .logo img {
-            max-width: 200px;
+            max-width: 180px;
             height: auto;
             filter: brightness(1) contrast(1.2);
             animation: logoFloat 3s ease-in-out infinite;
@@ -95,12 +95,12 @@
 
         h1 {
             font-family: 'Orbitron', monospace;
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 600;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             color: #ffffff;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         }
 
@@ -152,13 +152,13 @@
             margin-top: 0;
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 1.2rem;
         }
 
         .social-link {
             display: inline-block;
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 50%;
@@ -167,7 +167,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1rem;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
         }
 
@@ -227,15 +227,55 @@
         @media (max-width: 768px) {
             .coming-soon-container {
                 margin: 1rem;
-                padding: 2rem;
+                padding: 1.8rem 1.2rem;
+                max-width: 320px;
             }
 
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+                letter-spacing: 0.06em;
+            }
+
+            .logo {
+                margin-bottom: 2rem;
             }
 
             .logo img {
-                max-width: 160px;
+                max-width: 150px;
+            }
+
+            .social-links {
+                gap: 1rem;
+            }
+
+            .social-link {
+                width: 35px;
+                height: 35px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .coming-soon-container {
+                margin: 0.8rem;
+                padding: 1.5rem 1rem;
+                max-width: 300px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+                margin-bottom: 1.8rem;
+            }
+
+            .logo img {
+                max-width: 130px;
+            }
+
+            .social-link {
+                width: 32px;
+                height: 32px;
+                font-size: 0.8rem;
             }
         }
 
