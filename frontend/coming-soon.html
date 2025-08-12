@@ -52,6 +52,11 @@
             backdrop-filter: blur(20px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
             animation: fadeInUp 1.5s ease-out;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         @keyframes fadeInUp {
@@ -67,6 +72,8 @@
 
         .logo {
             margin-bottom: 2.5rem;
+            text-align: center;
+            width: 100%;
         }
 
         .logo img {
@@ -74,6 +81,8 @@
             height: auto;
             filter: brightness(1) contrast(1.2);
             animation: logoFloat 3s ease-in-out infinite;
+            display: block;
+            margin: 0 auto;
         }
 
         @keyframes logoFloat {
@@ -102,6 +111,11 @@
             text-transform: uppercase;
             letter-spacing: 0.08em;
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            text-align: center;
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .subtitle {
@@ -152,7 +166,9 @@
             margin-top: 0;
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 1.2rem;
+            width: 100%;
         }
 
         .social-link {
